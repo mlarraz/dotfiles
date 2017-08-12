@@ -1,6 +1,6 @@
 DISABLE_UPDATE_PROMPT=true
 
-plugins+=(aws github sublime colored-man-pages bundler golang osx rake ruby brew brew-cask chruby nyan jsontools docker yarn haskell)
+#plugins+=(aws github sublime colored-man-pages bundler golang osx rake ruby brew brew-cask chruby nyan jsontools docker yarn haskell)
 
 # Preferred editor for local and remote sessions
 export EDITOR=vim
