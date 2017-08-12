@@ -9,7 +9,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin()
+call plug#begin('~/.vim/bundle/')
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
