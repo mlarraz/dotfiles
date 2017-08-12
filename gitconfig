@@ -1,0 +1,14 @@
+[user]
+  name = Matt Larraz
+  email = mlarraz@users.noreply.github.com
+[alias]
+  co = checkout
+  pr = pull-request
+[core]
+  editor = vim
+[push]
+  default = simple
+[color]
+  ui = always
+[commit]
+#  gpgsign = true
