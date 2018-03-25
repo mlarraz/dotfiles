@@ -23,11 +23,9 @@ if !has('nvim')
   Plug 'Valloric/YouCompleteMe'
 endif
 
-"Plug 'altercation/vim-colors-solarized'
 Plug 'iCyMind/NeoSolarized'
 
 Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
 
 " JS
 Plug 'pangloss/vim-javascript'
@@ -308,7 +306,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+" Move a line of text using ALT+[jk] or Command+[jk] on macvim / vimr
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
