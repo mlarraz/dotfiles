@@ -19,8 +19,13 @@ Plug 'mileszs/ack.vim'
 
 Plug '/usr/local/opt/fzf'
 
+" Autocompletion
+Plug 'roxma/nvim-completion-manager'
+Plug 'roxma/ncm-rct-complete'
+
 if !has('nvim')
-  Plug 'Valloric/YouCompleteMe'
+"  Plug 'Valloric/YouCompleteMe'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
 Plug 'iCyMind/NeoSolarized'
