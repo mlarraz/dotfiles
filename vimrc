@@ -1,3 +1,5 @@
+" N.B.: Translations available at https://devhints.io/vimscript
+
 " Mostly stolen from https://github.com/amix/vimrc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -14,6 +16,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'mileszs/ack.vim'
+
+Plug '/usr/local/opt/fzf'
 
 if !has('nvim')
   Plug 'Valloric/YouCompleteMe'
@@ -341,6 +345,10 @@ cnoreabbrev Ag Ack!
 
 " When you press gv you Ack after the selected text
 vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
+
+
+" Invoke fzf with ctrl+p
+map <silent> <c-p> :FZF<CR>
 
 " Open Ack and put the cursor in the right position
 map <leader>g :Ack
