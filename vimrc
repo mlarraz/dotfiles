@@ -38,6 +38,8 @@ Plug 'fatih/vim-go'
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
+" VimL
+Plug 'Shougo/neco-vim'
 
 Plug 'jparise/vim-graphql'
 
