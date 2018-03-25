@@ -15,8 +15,8 @@ call plug#begin('~/.vim/bundle/')
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+" Search
 Plug 'mileszs/ack.vim'
-
 Plug '/usr/local/opt/fzf'
 
 " Autocompletion
@@ -28,8 +28,8 @@ if !has('nvim')
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+" Prettiness
 Plug 'iCyMind/NeoSolarized'
-
 Plug 'vim-airline/vim-airline'
 
 " JS
