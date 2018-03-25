@@ -12,3 +12,5 @@
   ui = always
 [commit]
 #  gpgsign = true
+[hub]
+  protocol = https
