@@ -5,7 +5,10 @@
   co = checkout
   pr = pull-request
 [core]
+  whitespace = blank-at-eol,blank-at-eof,space-before-tab
   editor = vim
+[rerere]
+  enabled = true
 [push]
   default = simple
 [color]
@@ -14,3 +17,5 @@
 #  gpgsign = true
 [hub]
   protocol = https
+[rebase]
+  autosquash = true
