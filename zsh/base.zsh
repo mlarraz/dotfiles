@@ -14,9 +14,12 @@ PATH=$PATH:/usr/X11/bin
 PATH=$PATH:/usr/local/opt/go/libexec/bin
 PATH=$PATH:$(yarn global bin)
 PATH=$PATH:$HOME/.local/bin # Haskell
+PATH=$PATH:/usr/local/opt/python/libexec/bin
 
 chruby ruby
 
 source /usr/local/share/zsh/site-functions/_aws
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
+
+alias b=bat
