@@ -4,18 +4,34 @@
 [alias]
   co = checkout
   pr = pull-request
+  pf = push --force-with-lease
+  rhu = reset --hard @{upstream}
 [core]
-  whitespace = blank-at-eol,blank-at-eof,space-before-tab
+  whitespace = trailing-space,space-before-tab
   editor = vim
 [rerere]
   enabled = true
 [push]
-  default = simple
+  default = current
 [color]
   ui = always
-[commit]
-#  gpgsign = true
 [hub]
   protocol = https
 [rebase]
   autosquash = true
+  stat = true
+  autoStash = true
+[http]
+  postBuffer = 524288000
+[mergetool]
+  keepBackup = false
+[diff]
+  mnemonicprefix = true
+[merge]
+  stat = true
+[credential]
+  helper = osxkeychain
+[pull]
+  rebase = true
+[commit]
+  gpgSign = false
