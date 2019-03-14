@@ -20,8 +20,10 @@ Plug 'mileszs/ack.vim'
 Plug '/usr/local/opt/fzf'
 
 " Autocompletion
-Plug 'roxma/nvim-completion-manager'
-Plug 'roxma/ncm-rct-complete'
+"Plug 'roxma/nvim-completion-manager'
+"Plug 'roxma/ncm-rct-complete'
+
+Plug 'junegunn/vim-easy-align'
 
 if !has('nvim')
 "  Plug 'Valloric/YouCompleteMe'
@@ -30,6 +32,7 @@ endif
 
 " Prettiness
 Plug 'iCyMind/NeoSolarized'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline'
 
 " JS
@@ -63,14 +66,19 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_text_changed = 1
 
-let g:ale_linters = { 'javascript': ['eslint']   }
+let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['ruby']  }
 let g:ale_fixers  = { 'javascript': ['prettier'] }
 
-let g:ale_javascript_prettier_options = '--no-semi --single-quote --print-width 120'
+"let g:ale_javascript_prettier_options = '--no-semi --single-quote --print-width 120'
 
 " All of your Plugins must be added before the following line
 call plug#end()
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -173,7 +181,7 @@ set foldcolumn=1
 syntax enable
 
 try
-  colorscheme NeoSolarized
+  colorscheme palenight "NeoSolarized
 catch
 endtry
 
