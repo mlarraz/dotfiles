@@ -22,13 +22,18 @@ Plug '/usr/local/opt/fzf'
 " Autocompletion
 "Plug 'roxma/nvim-completion-manager'
 "Plug 'roxma/ncm-rct-complete'
-
-Plug 'junegunn/vim-easy-align'
-
-if !has('nvim')
-"  Plug 'Valloric/YouCompleteMe'
+"Plug 'zxqfl/tabnine-vim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+let g:deoplete#enable_at_startup = 1
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+
+Plug 'junegunn/vim-easy-align'
 
 " Prettiness
 Plug 'iCyMind/NeoSolarized'
@@ -38,6 +43,23 @@ Plug 'vim-airline/vim-airline'
 " JS
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
+Plug 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+
+Plug 'Quramy/tsuquyomi'
+
+Plug 'kchmck/vim-coffee-script'
+
 " Elixir
 Plug 'slashmili/alchemist.vim'
 Plug 'elixir-lang/vim-elixir'
@@ -46,10 +68,16 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-haml'
+" Swift
+Plug 'keith/swift.vim'
+" Kotlin
+Plug 'udalov/kotlin-vim'
 " VimL
 Plug 'Shougo/neco-vim'
 
 Plug 'jparise/vim-graphql'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-sexp'
