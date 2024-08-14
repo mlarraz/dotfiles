@@ -27,6 +27,7 @@
   keepBackup = false
 [diff]
   mnemonicprefix = true
+  colormoved = default
 [merge]
   stat = true
 [credential]
@@ -40,3 +41,16 @@
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
+[pack]
+	useSparse = true
+[gc]
+	auto = 256
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gitlab.com"]
+  helper =
+  helper = !/usr/local/bin/glab auth git-credential

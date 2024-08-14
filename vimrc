@@ -11,6 +11,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+set pyxversion=3
+
 call plug#begin('~/.vim/bundle/')
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -26,9 +28,9 @@ Plug '/usr/local/opt/fzf'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/deoplete.nvim'
+  "Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+  "Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
 Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
@@ -75,6 +77,8 @@ Plug 'keith/swift.vim'
 Plug 'udalov/kotlin-vim'
 " VimL
 Plug 'Shougo/neco-vim'
+
+Plug 'hashivim/vim-terraform'
 
 Plug 'jparise/vim-graphql'
 Plug 'martinda/Jenkinsfile-vim-syntax'
